@@ -10,5 +10,23 @@ function getComputerChoice() {
 
 }
 
-console.log(getComputerChoice());
+function getHumanChoice() {
+    let choice = prompt("what do you choose (r, p, or s)?", " ")
 
+    if (choice.toLowerCase() === "r") {
+        return 'human chooses rock';
+    } else if (choice.toLowerCase() === "p") {
+        return 'human chooses paper';
+    } else if (choice.toLowerCase() === "s") {
+        return 'human chooses scissors';
+    } else {
+        return "not a good answer";
+    }
+}
+
+console.log(getHumanChoice());
+
+console.log("the computer chooses " + getComputerChoice());
+
+let humanScore = 0;
+let computerScore = 0;
