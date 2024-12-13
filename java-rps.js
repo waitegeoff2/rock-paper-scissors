@@ -79,7 +79,6 @@ function playRound(humanChoice, computerChoice) {
     // human choice = rock && computer choice = scissors = you lose
 }
 
-const computerSelection = getComputerChoice();
 
 playRound("", "");
 
