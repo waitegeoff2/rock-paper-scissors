@@ -51,6 +51,15 @@ function playRound(humanChoice, computerChoice) {
     
     humanChoice =  prompt("rock, paper, or scissors?", " ");
 
+    number = Math.random();
+   if (number <= 0.33) {
+    computerChoice = 'rock'; 
+   } else if (number >= 0.33 && number <= 0.66) {
+    computerChoice = 'paper';
+   } else if (number >= 0.66) {
+    computerChoice = 'scissors';
+   }
+
     if (humanChoice.toLowerCase() == computerChoice) {
         sameChoice();
         console.log("It's a tie! You selected " + humanChoice + " and computer selected " + computerChoice + "!");
@@ -72,15 +81,15 @@ function playRound(humanChoice, computerChoice) {
 
 const computerSelection = getComputerChoice();
 
-playRound("", computerSelection);
+playRound("", "");
 
-playRound("", computerSelection);
+playRound("", "");
 
-playRound("", computerSelection);
+playRound("", "");
 
-playRound("", computerSelection);
+playRound("", "");
 
-playRound("", computerSelection);
+playRound("", "");
 
 }
 
