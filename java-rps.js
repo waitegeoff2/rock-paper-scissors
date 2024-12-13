@@ -24,25 +24,44 @@ function getHumanChoice() {
     }
 }
 
+
+function playGame() {
+
 let humanScore = 0;
 let computerScore = 0;
 
-function playRound(humanChoice, computerChoice) {
-    const playerWins = "You win! You selected " + humanChoice + " and computer selected " + computerChoice + "! Your score is " + humanScore + " and computer score is " + computerScore;
-    const computerWins = "You lose! You selected " + humanChoice + " and computer selected " + computerChoice + "! Your score is " + humanScore + " and computer score is " + computerScore;
-    const tieGame = "It's a tie! You selected " + humanChoice + " and computer selected " + computerChoice + "! Your score is " + humanScore + " and computer score is " + computerScore;
-    const badAnswer = "Wrong answer dude";
+function addHumanScore() {
+    humanScore++;
+    const humanMessage = "your score is " + humanScore + " and the computer's score is " + computerScore + ".";
+    console.log(humanMessage);
+}
 
-    if (humanChoice == computerChoice) {
-        return tieGame;
-    } else if (humanChoice === 'rock' && computerChoice == 'scissors' || humanChoice === 'paper' && computerChoice === 'rock' || humanChoice === 'scissors' && computerChoice === 'paper') {
-        humanScore++;
-        return playerWins;
-    } else if (humanChoice === 'rock' && computerChoice == 'paper' || humanChoice === 'paper' && computerChoice === 'scissors' || humanChoice === 'scissors' && computerChoice === 'rock') {
-        computerScore++;
-        return computerWins;
+function addComputerScore () {
+    computerScore++;
+    const computerMessage = "your score is " + humanScore + " and the computer's score is " + computerScore + ".";
+    console.log(computerMessage);
+}
+
+function sameChoice() {
+    const tieMessage = "your score is " + humanScore + " and the computer's score is " + computerScore + ".";
+    console.log(tieMessage);
+}
+
+function playRound(humanChoice, computerChoice) {
+    
+    humanChoice =  prompt("rock, paper, or scissors?", " ");
+
+    if (humanChoice.toLowerCase() == computerChoice) {
+        sameChoice();
+        console.log("It's a tie! You selected " + humanChoice + " and computer selected " + computerChoice + "!");
+    } else if (humanChoice.toLowerCase() === 'rock' && computerChoice == 'scissors' || humanChoice.toLowerCase() === 'paper' && computerChoice === 'rock' || humanChoice.toLowerCase() === 'scissors' && computerChoice === 'paper') {
+        addHumanScore();
+        console.log("You win! You selected " + humanChoice + " and computer selected " + computerChoice + "!");
+    } else if (humanChoice.toLowerCase() === 'rock' && computerChoice == 'paper' || humanChoice.toLowerCase() === 'paper' && computerChoice === 'scissors' || humanChoice.toLowerCase() === 'scissors' && computerChoice === 'rock') {
+        addComputerScore();
+        console.log("You lose! You selected " + humanChoice + " and computer selected " + computerChoice + "!");
     } else {
-        return badAnswer;
+        console.log("Wrong answer dude");
     }
     
 
@@ -51,9 +70,42 @@ function playRound(humanChoice, computerChoice) {
     // human choice = rock && computer choice = scissors = you lose
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection =getComputerChoice();
+const computerSelection = getComputerChoice();
 
-playRound(humanSelection, computerSelection);
+playRound("", computerSelection);
 
-console.log(playRound(humanSelection, computerSelection));
+playRound("", computerSelection);
+
+playRound("", computerSelection);
+
+playRound("", computerSelection);
+
+playRound("", computerSelection);
+
+}
+
+playGame();
+
+
+
+
+
+// what did human pick? 
+// what did computer pick? 
+// did human win? 
+// if yes (score + 1)
+
+// playgame
+
+//score variables
+//playround
+    // asks prompt
+    //gets result and calls computer pick
+    //compares them for the rules of rps
+    //returns statement for wins and losses
+    //updates score
+
+    //loops playround
+
+
+ 
