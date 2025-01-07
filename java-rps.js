@@ -10,22 +10,6 @@ function getComputerChoice() {
 
 }
 
-
-// function getHumanChoice() {
-//     let choice = prompt("rock, paper, or scissors?", " ")
-
-//     if (choice.toLowerCase() === "rock") {
-//         return 'rock';
-//     } else if (choice.toLowerCase() === "paper") {
-//         return 'paper';
-//     } else if (choice.toLowerCase() === "scissors") {
-//         return 'scissors';
-//     } else {
-//         return 'a bad answer. try again dude';
-//     }
-// }
-
-
 // function playGame() { // pretty sure this function is unnecessary now
 
 let humanScore = 0;
