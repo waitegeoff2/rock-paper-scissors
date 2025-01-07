@@ -33,16 +33,14 @@ let computerScore = 0;
 
 function addHumanScore() {
     humanScore++;
-    // const humanMessage = "your score is " + humanScore + " and the computer's score is " + computerScore + ".";
 }
 
 function addComputerScore () {
     computerScore++;
-    // const computerMessage = "your score is " + humanScore + " and the computer's score is " + computerScore + ".";
 }
 
 function sameChoice() {
-    // const tieMessage = "your score is " + humanScore + " and the computer's score is " + computerScore + ".";
+    // unnecessary?
 }
 
 function playRound(humanChoice, computerChoice) {
@@ -114,9 +112,6 @@ function playRound(humanChoice, computerChoice) {
         
         results.appendChild(gamelost);
     }
-
-    // * RUN AN IF statement to add a text div if humanscore is "you win the round!"
-    // * RUN AND IF statment if compscore is 5 "computer wins the round"
     
 
 }
@@ -153,11 +148,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // }
-
-// playGame();
-
-
-// playGame();
 
 
 // what did human pick? 
